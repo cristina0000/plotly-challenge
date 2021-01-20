@@ -81,7 +81,7 @@ function initialize_dashboard() {
     });
 
       var first_sample = sample_names[0];
-    buildPlots(first_sample);
+    build_plots(first_sample);
     construct_metadata(first_sample);
   });
 }
