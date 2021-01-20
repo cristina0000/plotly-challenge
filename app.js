@@ -27,7 +27,7 @@ function build_plots(sample) {
       title: "Bacteria Cultures for Sample",
       margin: { t: 0 },
       hovermode: "closest",
-      xaxis: { title: "OTU Id" },
+      xaxis: { title: "OTU_Ids" },
       margin: { t: 40}
     };
     var bubble_data = [
@@ -47,7 +47,7 @@ function build_plots(sample) {
     Plotly.newPlot("bubble", bubble_data, bubble_layout);
 
     //bar plot
-    var y_ticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
+    var y_ticks = otu_ids.slice(0, 10).map(otu_ID => `OTU ${otu_ID}`).reverse();
     var bar_data = [
       {
         y: y_ticks,
@@ -59,7 +59,7 @@ function build_plots(sample) {
     ];
 
     var bar_layout = {
-      title: "Top 10 Bacteria Cultures",
+      title: "Top 10 Cultures",
       margin: { t: 40, l: 100 }
     };
 
